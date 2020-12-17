@@ -1,11 +1,12 @@
 //Maya ASCII 2018 scene
-//Name: Camera_Proto5.ma
-//Last modified: Sat, Nov 28, 2020 04:27:59 PM
+//Name: Camera_Proto5.0002.ma
+//Last modified: Sat, Nov 28, 2020 04:18:13 PM
 //Codeset: 1252
 requires maya "2018";
 requires "stereoCamera" "10.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
+fileInfo "exportedFrom" "C:/Users/1rich/OneDrive/Desktop/DGM-1660/Camera_Project/scenes/edits/Camera_Proto5.ma";
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
@@ -14,19 +15,19 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 createNode transform -s -n "persp";
 	rename -uid "F607409D-436E-7D02-CE7F-C18020DB1CF0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.508629451062204 1.9294354368829909 27.371681564512439 ;
-	setAttr ".r" -type "double3" -14.738352583743527 -5736.1999999999234 -8.6904231771760826e-16 ;
+	setAttr ".t" -type "double3" 7.5468762034268053 -2.4782417384930167 1.7075272299401725 ;
+	setAttr ".r" -type "double3" -51.338352586077328 -5688.2000000178596 0 ;
 	setAttr ".rp" -type "double3" 7.7715611723760958e-16 4.4408920985006262e-16 -1.7763568394002505e-15 ;
 	setAttr ".rpt" -type "double3" 5.8589969782038202e-16 -1.0497718775124718e-17 3.9407331506338592e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "04689E0E-4230-17A1-0B0B-158892308A7D";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.069535098642298;
+	setAttr ".coi" 1.7856944197869224;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 6.4856287516677948 -4.1321334848091844 1.6438846202398456 ;
+	setAttr ".tp" -type "double3" 6.4871261235838062 -3.8725990060439117 1.3590991318212022 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -2140,12 +2141,15 @@ createNode mesh -n "CameraBodyShape" -p "CameraBody";
 	setAttr -av ".iog[0].og[4].gid";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.625 0.5 ;
+	setAttr ".pv" -type "double2" 0.68682464957237244 0.0097922850400209427 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[188]" -type "float3" 0.0011259812 0 0 ;
+	setAttr ".pt[191]" -type "float3" 0.0011259812 0 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "OldKnobThing";
 	rename -uid "0193F0F2-4F3E-F5C8-935A-8A85ED43378C";
@@ -7699,105 +7703,6 @@ createNode polyMergeVert -n "polyMergeVert36";
 	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
 		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
 	setAttr ".am" yes;
-createNode polyExtrudeFace -n "polyExtrudeFace122";
-	rename -uid "63DB761C-4AE6-FC55-7439-4C9584B82155";
-	setAttr ".ics" -type "componentList" 1 "f[2]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".ws" yes;
-	setAttr ".t" -type "double3" 0.036807168226038023 2.6645352591003757e-15 0 ;
-	setAttr ".pvt" -type "float3" 6.5239325 -3.8725991 1.3590991 ;
-	setAttr ".rs" 46569;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" 6.4871261235838062 -4.0442256444733102 1.0726444070541699 ;
-	setAttr ".cbx" -type "double3" 6.4871261235838062 -3.7009723676145132 1.6455538565882346 ;
-createNode polyTweak -n "polyTweak65";
-	rename -uid "D2B381D6-4A72-E111-8C9E-2687633BC1F5";
-	setAttr ".uopa" yes;
-	setAttr -s 6 ".tk";
-	setAttr ".tk[188]" -type "float3" 0.0011259812 0 0 ;
-	setAttr ".tk[191]" -type "float3" 0.0011259812 0 0 ;
-	setAttr ".tk[252]" -type "float3" 0.0029044445 0 -0.0075093731 ;
-	setAttr ".tk[253]" -type "float3" 0.0029044445 0 -0.0075093731 ;
-createNode polyMergeVert -n "polyMergeVert37";
-	rename -uid "1C6FFBC8-4DE5-5D97-4563-7F8CD6A4933C";
-	setAttr ".ics" -type "componentList" 2 "vtx[253]" "vtx[255]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".am" yes;
-createNode polyTweak -n "polyTweak66";
-	rename -uid "631189CD-4858-7C22-F888-FD99B8A9C00A";
-	setAttr ".uopa" yes;
-	setAttr -s 3 ".tk[254:255]" -type "float3"  0 0 0.0035417825 0 0 0.0035417825;
-createNode polyMergeVert -n "polyMergeVert38";
-	rename -uid "A3514E69-4410-2D33-CED7-4980DA88FA45";
-	setAttr ".ics" -type "componentList" 2 "vtx[252]" "vtx[254]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".am" yes;
-createNode polyExtrudeFace -n "polyExtrudeFace123";
-	rename -uid "B1A92D74-4CD9-5910-0BA2-23A70BF9A9BD";
-	setAttr ".ics" -type "componentList" 1 "f[16]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" 6.0323439 -4.0881796 2.0535982 ;
-	setAttr ".rs" 43092;
-	setAttr ".lt" -type "double3" 2.071910351619799e-15 0 -0.0022423939029614648 ;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" 5.5775614232812289 -4.1321334848091844 1.6455538565882346 ;
-	setAttr ".cbx" -type "double3" 6.4871261235838062 -4.0442256444733102 2.4616426969152965 ;
-createNode polyTweak -n "polyTweak67";
-	rename -uid "9F200140-4BA8-9F92-41B2-4D92410DDE03";
-	setAttr ".uopa" yes;
-	setAttr -s 7 ".tk";
-	setAttr ".tk[252]" -type "float3" -0.00051861734 0 0.0025016749 ;
-	setAttr ".tk[253]" -type "float3" -0.00051861734 0 0.0025016749 ;
-createNode deleteComponent -n "deleteComponent188";
-	rename -uid "C9B929EC-4C3F-4F36-B1B7-D0B219227784";
-	setAttr ".dc" -type "componentList" 1 "f[261]";
-createNode deleteComponent -n "deleteComponent189";
-	rename -uid "87401456-4459-71E5-2764-D49E5CE86860";
-	setAttr ".dc" -type "componentList" 1 "f[206]";
-createNode polyMergeVert -n "polyMergeVert39";
-	rename -uid "5654A6CD-48E2-B9D8-EC6C-008D5527E655";
-	setAttr ".ics" -type "componentList" 2 "vtx[207]" "vtx[258]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".am" yes;
-createNode polyMergeVert -n "polyMergeVert40";
-	rename -uid "212F9C1A-429C-F870-1EA1-4C8CE762C252";
-	setAttr ".ics" -type "componentList" 2 "vtx[1]" "vtx[256]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".am" yes;
-createNode polyMergeVert -n "polyMergeVert41";
-	rename -uid "FEF204CF-4C00-869B-EF26-BCB5B0E9F5BB";
-	setAttr ".ics" -type "componentList" 2 "vtx[1]" "vtx[248]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".am" yes;
-createNode polyMergeVert -n "polyMergeVert42";
-	rename -uid "8F616E49-411F-0E44-C570-0BA6C8841475";
-	setAttr ".ics" -type "componentList" 2 "vtx[1]" "vtx[205]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".am" yes;
-createNode polyExtrudeFace -n "polyExtrudeFace124";
-	rename -uid "5F492D03-40E7-7769-5B68-A195B0E2CF64";
-	setAttr ".ics" -type "componentList" 1 "f[15]";
-	setAttr ".ix" -type "matrix" 12.510822742657338 0 0 0 0 4.957008501413239 0 0 0 0 3.161921505247383 0
-		 -0.67784994804743959 -1.6109180217686894 0.88068213275681329 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" 6.4871264 -4.0881791 1.3590991 ;
-	setAttr ".rs" 42591;
-	setAttr ".lt" -type "double3" -1.4262613223860622e-19 -7.8662859824830578e-20 -0.00064233099600308208 ;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" 6.4871261235838062 -4.1321334848091844 1.0726444070541699 ;
-	setAttr ".cbx" -type "double3" 6.4871261235838062 -4.0442247580911168 1.6455538565882346 ;
-createNode deleteComponent -n "deleteComponent190";
-	rename -uid "F1693923-4993-621E-0BEF-C982E31E0E4B";
-	setAttr ".dc" -type "componentList" 1 "f[263]";
 select -ne :time1;
 	setAttr ".o" 67;
 	setAttr ".unw" 67;
@@ -7875,7 +7780,7 @@ connectAttr "polyExtrudeFace64.out" "BackHingeShape.i";
 connectAttr "polyExtrudeFace69.out" "pCylinderShape3.i";
 connectAttr "polyExtrudeFace104.out" "LensShape1.i";
 connectAttr "polyExtrudeFace91.out" "SideInputShape2.i";
-connectAttr "deleteComponent190.og" "CameraBodyShape.i";
+connectAttr "polyMergeVert36.out" "CameraBodyShape.i";
 connectAttr "transformGeometry6.og" "pCylinderShape7.i";
 connectAttr "polyBridgeEdge28.out" "pCylinderShape6.i";
 connectAttr "polyBridgeEdge26.out" "pCylinderShape5.i";
@@ -8637,30 +8542,6 @@ connectAttr "polyExtrudeFace121.out" "polyMergeVert35.ip";
 connectAttr "CameraBodyShape.wm" "polyMergeVert35.mp";
 connectAttr "polyMergeVert35.out" "polyMergeVert36.ip";
 connectAttr "CameraBodyShape.wm" "polyMergeVert36.mp";
-connectAttr "polyTweak65.out" "polyExtrudeFace122.ip";
-connectAttr "CameraBodyShape.wm" "polyExtrudeFace122.mp";
-connectAttr "polyMergeVert36.out" "polyTweak65.ip";
-connectAttr "polyTweak66.out" "polyMergeVert37.ip";
-connectAttr "CameraBodyShape.wm" "polyMergeVert37.mp";
-connectAttr "polyExtrudeFace122.out" "polyTweak66.ip";
-connectAttr "polyMergeVert37.out" "polyMergeVert38.ip";
-connectAttr "CameraBodyShape.wm" "polyMergeVert38.mp";
-connectAttr "polyTweak67.out" "polyExtrudeFace123.ip";
-connectAttr "CameraBodyShape.wm" "polyExtrudeFace123.mp";
-connectAttr "polyMergeVert38.out" "polyTweak67.ip";
-connectAttr "polyExtrudeFace123.out" "deleteComponent188.ig";
-connectAttr "deleteComponent188.og" "deleteComponent189.ig";
-connectAttr "deleteComponent189.og" "polyMergeVert39.ip";
-connectAttr "CameraBodyShape.wm" "polyMergeVert39.mp";
-connectAttr "polyMergeVert39.out" "polyMergeVert40.ip";
-connectAttr "CameraBodyShape.wm" "polyMergeVert40.mp";
-connectAttr "polyMergeVert40.out" "polyMergeVert41.ip";
-connectAttr "CameraBodyShape.wm" "polyMergeVert41.mp";
-connectAttr "polyMergeVert41.out" "polyMergeVert42.ip";
-connectAttr "CameraBodyShape.wm" "polyMergeVert42.mp";
-connectAttr "polyMergeVert42.out" "polyExtrudeFace124.ip";
-connectAttr "CameraBodyShape.wm" "polyExtrudeFace124.mp";
-connectAttr "polyExtrudeFace124.out" "deleteComponent190.ig";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "CameraBodyOldShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "topHoleShape.iog" ":initialShadingGroup.dsm" -na;
@@ -8691,4 +8572,4 @@ connectAttr "pCylinderShape9.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape10.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape11.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
-// End of Camera_Proto5.ma
+// End of Camera_Proto5.0002.ma
